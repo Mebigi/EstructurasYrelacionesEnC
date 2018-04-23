@@ -9,6 +9,6 @@
 */
 int main()
 {
-    printf("Hello world!\n");
+    printf("Mercedes Bigi\n");
     return 0;
 }
