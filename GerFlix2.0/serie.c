@@ -61,20 +61,56 @@ void quienveserie(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsua
 
                      }
 
-
-
-
                 }
 
-
-
             }
-
-
 
         }
         printf("\n");
     }
+
+
+}
+
+void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[])
+{
+    int contador[]= {0};
+    int flag =0;
+    int menospopular;
+
+    for(int i=0; i<4; i++)
+    {
+        //listaserie[i];
+
+        for(int j=0; j<9; j++)
+        {
+             if(listausuarioyserie[j].idSerie == listaserie[i].idSerie)
+             {
+                 contador[i]++;
+             }
+
+
+        }
+
+         printf("Serie: %s cantidad: %d \n", listaserie[i].nombre, contador[i]);
+
+        //for para contador
+
+
+        if (contador[i] <= menospopular || flag == 0)
+        {
+
+        menospopular = listaserie[i].idSerie;
+        flag =1;
+
+        //strcpy(menospopular, listaserie[i].nombre);
+
+
+
+        }
+    }
+
+    printf("Serie: %d \n", menospopular);
 
 
 }

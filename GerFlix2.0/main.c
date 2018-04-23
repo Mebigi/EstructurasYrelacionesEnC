@@ -35,5 +35,9 @@ int main()
      printf("________________________________________________________________________________________________________\n");
 
 
+
+     SeriesMenosPopulares(listadoSeries, listausuarioyserie);
+
+
     return 0;
 }

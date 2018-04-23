@@ -12,6 +12,7 @@ typedef struct{
 void CrearListadoUsuariosYSeries(eUsuarioSerie []);
 void seriequeve(eUsuario [], eUsuarioSerie [], eSerie []);
 void quienveserie(eSerie [], eUsuarioSerie [], eUsuario []);
+void SeriesMenosPopulares(eSerie [], eUsuarioSerie []);
 
 
 #endif // USUARIOSERIE_H_INCLUDED
