@@ -1,6 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "serie.h"
 #include "usuario.h"
 #include "usuarioSerie.h"
-#include "serie.h"
+#include <string.h>
 
 void CrearListadoDeTresUsuarios(eUsuario MisUsuarios[])
 {
@@ -25,16 +28,27 @@ void mostrarListadoUsu(eUsuario lista[])
     }
 }
 
-void seriequeve(eUsuario lista[], eUsuarioSerie listausuarioyserie[],  eSerie listaserie[])
+void seriequeve(eUsuario lista[], eUsuarioSerie listausuarioyserie[], eSerie listaserie[])
 {
     for(int i=0; i<3; i++)
     {
+        //printf("Nombre usuario: %s  \n", lista[i].nombre);
 
-        for(int j=0; j<5; j++)
+        for(int j=0; j<9; j++)
         {
-            if(listausuarioyserie[j].idUsuario== lista[i].idUsuario)
+
+            if(lista[i].idUsuario == listausuarioyserie[j].idUsuario)
             {
-                printf("Nombre usuario: %s nombre serie: %s", lista[i].nombre, listaserie[j].nombre);
+                for(int k=0; k<4; k++)
+                {
+                     if(listaserie[k].idSerie == listausuarioyserie[j].idSerie)
+                     {
+                           printf("Nombre usuario: %s Nombre serie: %s \n", lista[i].nombre, listaserie[k].nombre);
+                     }
+
+
+                }
+
             }
         }
     }

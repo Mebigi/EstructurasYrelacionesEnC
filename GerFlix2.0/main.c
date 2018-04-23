@@ -3,7 +3,7 @@
 #include "serie.h"
 #include "usuario.h"
 #include "usuarioSerie.h"
-#define TAMANIO 5
+#define TAMANIO 10
 
 /**
 *
@@ -15,16 +15,18 @@
 int main()
 {
     eSerie listadoSeries[TAMANIO];
-    CrearListadoSeries(listadoSeries,5);
-
-
-
-
+    eUsuarioSerie listausuarioyserie[TAMANIO];
     eUsuario listadoUsuarios[TAMANIO];
 
-    CrearListadoDeTresUsuarios(listadoUsuarios,3);
 
-    mostrarListadoUsu(listadoUsuarios);
+    CrearListadoSeries(listadoSeries,4);
+    CrearListadoUsuariosYSeries(listausuarioyserie);
+    CrearListadoDeTresUsuarios(listadoUsuarios);
+
+    //mostrarListadoUsu(listadoUsuarios);
+
+
+    seriequeve(listadoUsuarios, listausuarioyserie, listadoSeries);
 
     printf("Hello world!\n");
     return 0;
