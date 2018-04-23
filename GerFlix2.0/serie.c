@@ -1,4 +1,6 @@
 #include "serie.h"
+#include "usuarioSerie.h"
+#include "usuario.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,4 +36,45 @@ void mostrarSerie(eSerie lista[])
     {
         printf("Nombre: %s Genero: %s", lista[i].nombre, lista[i].genero);
     }
+}
+
+
+
+
+void quienveserie(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsuario lista[])
+{
+    for(int i=0; i<4; i++)
+    {
+        printf("\nNombre Serie: %s \nseries: ", listaserie[i].nombre);
+
+        for(int j=0; j<9; j++)
+        {
+
+
+            if(listaserie[i].idSerie == listausuarioyserie[j].idSerie)
+            {
+                for(int k=0; k<3; k++)
+                {
+                     if(lista[k].idUsuario == listausuarioyserie[j].idUsuario)
+                     {
+                           printf("%s - ", lista[k].nombre);
+
+                     }
+
+
+
+
+                }
+
+
+
+            }
+
+
+
+        }
+        printf("\n");
+    }
+
+
 }

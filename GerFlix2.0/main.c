@@ -28,6 +28,12 @@ int main()
 
     seriequeve(listadoUsuarios, listausuarioyserie, listadoSeries);
 
+     printf("________________________________________________________________________________________________________\n");
+
+    quienveserie(listadoSeries, listausuarioyserie, listadoUsuarios);
+
+     printf("________________________________________________________________________________________________________\n");
+
 
     return 0;
 }
