@@ -32,10 +32,11 @@ void seriequeve(eUsuario lista[], eUsuarioSerie listausuarioyserie[], eSerie lis
 {
     for(int i=0; i<3; i++)
     {
-        //printf("Nombre usuario: %s  \n", lista[i].nombre);
+        printf("\nNombre usuario: %s \nseries: ", lista[i].nombre);
 
         for(int j=0; j<9; j++)
         {
+
 
             if(lista[i].idUsuario == listausuarioyserie[j].idUsuario)
             {
@@ -43,14 +44,23 @@ void seriequeve(eUsuario lista[], eUsuarioSerie listausuarioyserie[], eSerie lis
                 {
                      if(listaserie[k].idSerie == listausuarioyserie[j].idSerie)
                      {
-                           printf("Nombre usuario: %s Nombre serie: %s \n", lista[i].nombre, listaserie[k].nombre);
+                           printf("%s - ", listaserie[k].nombre);
+
                      }
+
+
 
 
                 }
 
+
+
             }
+
+
+
         }
+        printf("\n");
     }
 
 

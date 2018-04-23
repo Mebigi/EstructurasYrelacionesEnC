@@ -30,7 +30,7 @@
 
 1524502584 c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\serie.h
 
-1524502186 source:c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\usuarioserie.c
+1524507857 source:c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\usuarioserie.c
 	"usuarioSerie.h"
 
 1524503713 c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\usuarioserie.h
@@ -39,7 +39,7 @@
 
 1524502376 c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\usuario.h
 
-1524507018 source:c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\usuario.c
+1524508087 source:c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\usuario.c
 	<stdio.h>
 	<stdlib.h>
 	"serie.h"
@@ -47,7 +47,7 @@
 	"usuarioSerie.h"
 	<string.h>
 
-1524507094 source:c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\main.c
+1524507596 source:c:\1ercuatrimestretecnicatura\estructurasyrelacionesenc\gerflix2.0\main.c
 	<stdio.h>
 	<stdlib.h>
 	"serie.h"
