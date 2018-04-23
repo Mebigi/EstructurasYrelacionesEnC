@@ -8,3 +8,6 @@ typedef struct{
 
 
 #endif // USUARIOSERIE_H_INCLUDED
+
+
+

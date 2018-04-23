@@ -6,4 +6,11 @@ typedef struct{
 }eUsuario;
 
 
+void CrearListadoDeTresUsuarios(eUsuario []);
+void mostrarListadoUsu(eUsuario []);
+void seriequeve(eUsuario [], eUsuarioSerie [],  eSerie []);
+
+
 #endif // USUARIO_H_INCLUDED
+
+
