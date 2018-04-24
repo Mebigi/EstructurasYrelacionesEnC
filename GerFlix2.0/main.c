@@ -28,6 +28,7 @@ int main()
     CrearListadoUsuariosYSeries(listausuarioyserie);
     CrearListadoDeTresUsuarios(listadoUsuarios);
 
+
     //mostrarListadoUsu(listadoUsuarios);
 
 
@@ -42,6 +43,20 @@ int main()
 
 
      SeriesMenosPopulares(listadoSeries, listausuarioyserie, listadoUsuarios);
+
+    printf("________________________________________________________________________________________________________\n");
+
+
+     consultarUsuarioyMostrarSeries(listadoUsuarios, listausuarioyserie, listadoSeries);
+
+    printf("________________________________________________________________________________________________________\n");
+
+
+      consultarSerieyMostrarUsuarios(listadoUsuarios, listausuarioyserie, listadoSeries);
+
+    printf("________________________________________________________________________________________________________\n");
+
+
 
 
     return 0;

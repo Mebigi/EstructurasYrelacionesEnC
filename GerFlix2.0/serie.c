@@ -61,7 +61,12 @@ void mostrarSerie(eSerie lista[], int cantidad)
 {
     for(int i=0; i<cantidad; i++)
     {
-        printf("Nombre: %s Genero: %s", lista[i].nombre, lista[i].genero);
+
+        if(lista[i].estado == 1)
+        {
+             printf("Nombre: %s Genero: %s", lista[i].nombre, lista[i].genero);
+        }
+
     }
 }
 
@@ -75,12 +80,19 @@ void quienveserie(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsua
 
     {
 
-        if(listaserie[i].estado == 1)
+        if(listaserie[i].estado == 1 )
         {
 
               printf("\nNombre Serie: %s Estado: %d  \nUsuarios: ", listaserie[i].nombre, listaserie[i].estado);
 
+
+
+
         }
+
+
+
+
 
 
 
@@ -104,18 +116,22 @@ void quienveserie(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsua
 
         }
 
+
+
+
     }
 
 
-}
 
+
+
+ }
 void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsuario lista[])
 {
     int contador[TAM_S]= {0};
     int flag =0;
     int seriemenospopular=0;
-    int aux;
-    int idserie[TAM_S];
+
 
     for(int i=0; i<TAM_S; i++)
     {
@@ -177,7 +193,7 @@ void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[
 
         if (contador[i] == seriemenospopular && listaserie[i].estado == 1)
         {
-          printf("\menos polular para la serie  %d contador %d\n ", listaserie[i].estado, listaserie[i].idSerie, contador[i]);
+          printf("\nmenos polular para la serie  %d contador %d\n ", listaserie[i].estado, listaserie[i].idSerie, contador[i]);
         }
 
 
@@ -185,6 +201,64 @@ void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[
     }
 }
 
+
+
+void consultarSerieyMostrarUsuarios(eUsuario lista[], eUsuarioSerie listausuarioyserie[], eSerie listaserie[])
+{
+    int ids;
+    printf("Consultar Serie: (ingrese ID):\n");
+    fflush(stdin);
+    scanf("%d", &ids);
+    int flag=0;
+    int flagu=0;
+
+
+    for(int i=0; i<TAM_U; i++)
+    {
+        if(ids == listaserie[i].idSerie)
+        {
+            printf("Nombre de Serie: %s", listaserie[i].nombre);
+            flag =1;
+
+
+            for(int j=0; j<TAM_US; j++)
+            {
+
+
+                if(listaserie[i].idSerie == listausuarioyserie[j].idSerie)
+
+                {
+
+                    for(int k=0; k<TAM_U; k++)
+                    {
+                        if(lista[k].idUsuario == listausuarioyserie[j].idUsuario && lista[k].idUsuario !=0)
+                        {
+
+                            printf("\nUsuario: %s ", lista[k].nombre) ;
+                            flagu = 1;
+                        }
+
+
+                    }
+                }
+
+            }
+        } //
+    }
+
+    if(flag == 0)
+    {
+        printf("serie no encontrada");
+    }
+
+     if(flagu == 0)
+    {
+        printf(" Nadie mira la serie\n");
+    }
+
+
+
+}
 
 
 

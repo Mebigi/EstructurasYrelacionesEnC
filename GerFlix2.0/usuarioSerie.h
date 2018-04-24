@@ -14,6 +14,8 @@ void CrearListadoUsuariosYSeries(eUsuarioSerie []);
 void seriequeve(eUsuario [], eUsuarioSerie [], eSerie []);
 void quienveserie(eSerie [], eUsuarioSerie [], eUsuario []);
 void SeriesMenosPopulares(eSerie [], eUsuarioSerie [], eUsuario []);
+void consultarUsuarioyMostrarSeries(eUsuario [], eUsuarioSerie [], eSerie []);
+void consultarSerieyMostrarUsuarios(eUsuario [], eUsuarioSerie [], eSerie []);
 
 
 #endif // USUARIOSERIE_H_INCLUDED
