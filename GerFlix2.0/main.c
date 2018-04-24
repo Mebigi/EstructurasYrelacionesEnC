@@ -59,5 +59,12 @@ int main()
 
 
 
+
+    TopTresSeriesMasPopulares(listadoSeries, listausuarioyserie, listadoUsuarios);
+
+      printf("________________________________________________________________________________________________________\n");
+
+
+
     return 0;
 }

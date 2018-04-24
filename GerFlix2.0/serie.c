@@ -263,6 +263,111 @@ void consultarSerieyMostrarUsuarios(eUsuario lista[], eUsuarioSerie listausuario
 
 
 
+void TopTresSeriesMasPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsuario lista[])
+{
+    int contador[TAM_S]= {0};
+    int flag1 =0;
+      int flag2 =0;
+        int flag3 =0;
+    int seriemaspopular1=0;
+    int seriemaspopular2=0;
+    int seriemaspopular3=0;
+
+
+
+    for(int i=0; i<TAM_S; i++)
+    {
+        for(int j=0; j<TAM_US; j++)
+        {
+
+
+            if(listaserie[i].idSerie == listausuarioyserie[j].idSerie)
+            {
+                for(int k=0; k<TAM_U; k++)
+                {
+                    if(lista[k].idUsuario == listausuarioyserie[j].idUsuario &&   listaserie[i].estado == 1 && lista[k].idUsuario != 0)
+                    {
+                        contador[i]++;
+
+
+                    }
+
+
+
+
+                }
+
+
+            }
+
+        }
+
+
+
+    }
+
+    for(int i=0; i<TAM_S; i++)
+    {
+
+        if (listaserie[i].estado == 1)
+
+            {
+              if (contador[i] > seriemaspopular1 || flag1 == 0)
+
+            {
+                seriemaspopular1 = contador[i];
+                flag1 = 1;
+
+            }
+            else if ((contador[i] < seriemaspopular1 && contador[i] > seriemaspopular2)|| flag2 == 0)
+
+            {
+                seriemaspopular2 = contador[i];
+                flag2 = 1;
+
+            }
+             else if (((contador[i] > seriemaspopular3) && (contador[i] < seriemaspopular2)) || flag3 == 0)
+
+            {
+                seriemaspopular3 = contador[i];
+                flag3 = 1;
+
+            }
+
+
+            }
+
+
+    }
+
+
+
+
+
+
+
+    for(int i=0; i<TAM_S; i++)
+    {
+
+        if (contador[i] == seriemaspopular1 && listaserie[i].estado == 1)
+        {
+          printf("\nmas polular puesto1  para la serie  %d contador %d\n ", listaserie[i].idSerie, contador[i]);
+        }
+         else if (contador[i] == seriemaspopular2 && listaserie[i].estado == 1)
+        {
+          printf("\nmas polular puesto2 para la serie  %d contador %d\n ", listaserie[i].idSerie, contador[i]);
+        }
+        else if (contador[i] == seriemaspopular3 && listaserie[i].estado == 1)
+        {
+          printf("\nmas polular puesto3 para la serie  %d contador %d\n ", listaserie[i].idSerie, contador[i]);
+        }
+
+    }
+}
+
+
+
+
 
 
 
