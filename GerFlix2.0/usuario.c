@@ -5,6 +5,9 @@
 #include "usuarioSerie.h"
 #include <string.h>
 
+
+
+
 void CrearListadoDeTresUsuarios(eUsuario MisUsuarios[])
 {
     int i;

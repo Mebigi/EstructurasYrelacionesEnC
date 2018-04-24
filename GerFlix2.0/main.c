@@ -3,7 +3,9 @@
 #include "serie.h"
 #include "usuario.h"
 #include "usuarioSerie.h"
-#define TAMANIO 10
+#define TAM_S 30
+#define TAM_US 600
+#define TAM_U 20
 
 /**
 *
@@ -14,12 +16,15 @@
 */
 int main()
 {
-    eSerie listadoSeries[TAMANIO]={0};
-    eUsuarioSerie listausuarioyserie[TAMANIO];
-    eUsuario listadoUsuarios[TAMANIO];
+    eSerie listadoSeries[TAM_S]={0};
+    //CrearEstadoSeries(listadoSeries, TAM_S);
 
 
-    CrearListadoSeries(listadoSeries,4);
+    eUsuarioSerie listausuarioyserie[TAM_US];
+    eUsuario listadoUsuarios[TAM_U];
+
+
+    CrearListadoSeries(listadoSeries,TAM_S);
     CrearListadoUsuariosYSeries(listausuarioyserie);
     CrearListadoDeTresUsuarios(listadoUsuarios);
 

@@ -5,10 +5,11 @@ typedef struct{
     int idSerie;
     char nombre[50];
     char genero[50];
+    int estado;
 }eSerie;
 
-
-void mostrarSerie(eSerie []);
+void CrearEstadoSeries(eSerie[],int);
+void mostrarSerie(eSerie [], int);
 void CrearListadoSeries(eSerie [],int);
 
 

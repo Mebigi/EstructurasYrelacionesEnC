@@ -7,6 +7,7 @@
 typedef struct{
     int idUsuario;
     int idSerie;
+    int estado;
 }eUsuarioSerie;
 
 void CrearListadoUsuariosYSeries(eUsuarioSerie []);

@@ -5,6 +5,7 @@
 typedef struct{
     int idUsuario;
     char nombre[50];
+    int estado;
 }eUsuario;
 
 
