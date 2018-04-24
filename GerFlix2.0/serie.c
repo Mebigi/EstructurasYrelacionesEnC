@@ -29,6 +29,7 @@ void CrearListadoSeries(eSerie array[],int cantidad)
     for(i=0; i<cantidad; i++)
     {
         array[i].idSerie=i+1;
+        array[i].estado = 0;
         if(i%2==0)
         {
             strcpy(array[i].genero,"Terror");
@@ -126,7 +127,7 @@ void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[
             {
                 for(int k=0; k<TAM_U; k++)
                 {
-                    if(lista[k].idUsuario == listausuarioyserie[j].idUsuario)
+                    if(lista[k].idUsuario == listausuarioyserie[j].idUsuario &&   listaserie[i].estado == 1 && lista[k].idUsuario != 0)
                     {
                         contador[i]++;
 
@@ -165,10 +166,7 @@ void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[
 
     }
 
-for(int i=0; i<TAM_S; i++)
-{
-    printf("estado  para la serie 5 %d contador %d\n ", listaserie[i].estado, contador[i]);
-}
+
 
 
 
@@ -177,9 +175,9 @@ for(int i=0; i<TAM_S; i++)
     for(int i=0; i<TAM_S; i++)
     {
 
-        if (contador[i] == seriemenospopular)
+        if (contador[i] == seriemenospopular && listaserie[i].estado == 1)
         {
-        printf(" %d ID Serie: %d \n", seriemenospopular, listaserie[i].idSerie);
+          printf("\menos polular para la serie  %d contador %d\n ", listaserie[i].estado, listaserie[i].idSerie, contador[i]);
         }
 
 
