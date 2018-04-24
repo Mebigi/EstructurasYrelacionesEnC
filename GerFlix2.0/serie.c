@@ -32,7 +32,7 @@ void CrearListadoSeries(eSerie array[],int cantidad)
 
 void mostrarSerie(eSerie lista[])
 {
-    for(int i=0; i<4; i++)
+    for(int i=0; i<5; i++)
     {
         printf("Nombre: %s Genero: %s", lista[i].nombre, lista[i].genero);
     }
@@ -43,9 +43,9 @@ void mostrarSerie(eSerie lista[])
 
 void quienveserie(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsuario lista[])
 {
-    for(int i=0; i<4; i++)
+    for(int i=0; i<5; i++)
     {
-        printf("\nNombre Serie: %s \nseries: ", listaserie[i].nombre);
+        printf("\nNombre Serie: %s \nUsuarios: ", listaserie[i].nombre);
 
         for(int j=0; j<9; j++)
         {
@@ -72,45 +72,56 @@ void quienveserie(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsua
 
 }
 
-void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[])
+void SeriesMenosPopulares(eSerie listaserie[], eUsuarioSerie listausuarioyserie[], eUsuario lista[])
 {
     int contador[]= {0};
     int flag =0;
-    int menospopular;
+    int seriemenospopular=0;
+    int aux;
+    int idserie[5];
 
-    for(int i=0; i<4; i++)
+for(int i=0; i<5; i++)
     {
-        //listaserie[i];
-
-        for(int j=0; j<9; j++)
+   for(int j=0; j<9; j++)
         {
-             if(listausuarioyserie[j].idSerie == listaserie[i].idSerie)
-             {
-                 contador[i]++;
-             }
 
+
+            if(listaserie[i].idSerie == listausuarioyserie[j].idSerie)
+            {
+                for(int k=0; k<3; k++)
+                {
+                     if(lista[k].idUsuario == listausuarioyserie[j].idUsuario)
+                     {
+                           contador[i]++;
+
+                     }
+
+
+
+
+                }
+
+
+            }
 
         }
 
-         printf("Serie: %s cantidad: %d \n", listaserie[i].nombre, contador[i]);
-
-        //for para contador
-
-
-        if (contador[i] <= menospopular || flag == 0)
-        {
-
-        menospopular = listaserie[i].idSerie;
-        flag =1;
-
-        //strcpy(menospopular, listaserie[i].nombre);
 
 
 
-        }
-    }
+if (contador[i] < seriemenospopular || flag == 0)
+{
+seriemenospopular = contador[i];
+flag = 1;
 
-    printf("Serie: %d \n", menospopular);
+}
+
+printf("%d", seriemenospopular);
 
 
 }
+
+
+}
+
+

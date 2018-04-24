@@ -56,3 +56,37 @@
 	"usuario.h"
 	"usuarioSerie.h"
 
+1524538644 source:c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"serie.h"
+	"usuario.h"
+	"usuarioSerie.h"
+
+1524529209 c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\serie.h
+
+1524529209 c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\usuario.h
+
+1524538584 c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\usuarioserie.h
+	"serie.h"
+	"usuario.h"
+
+1524529209 source:c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	"serie.h"
+	"usuario.h"
+	"usuarioSerie.h"
+	<string.h>
+
+1524529209 source:c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\usuarioserie.c
+	"usuarioSerie.h"
+
+1524540059 source:c:\programacion1cuatri\estructurasyrelacionesenc\gerflix2.0\serie.c
+	"serie.h"
+	"usuarioSerie.h"
+	"usuario.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+

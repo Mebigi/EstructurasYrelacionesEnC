@@ -14,7 +14,7 @@
 */
 int main()
 {
-    eSerie listadoSeries[TAMANIO];
+    eSerie listadoSeries[TAMANIO]={0};
     eUsuarioSerie listausuarioyserie[TAMANIO];
     eUsuario listadoUsuarios[TAMANIO];
 
@@ -36,7 +36,7 @@ int main()
 
 
 
-     SeriesMenosPopulares(listadoSeries, listausuarioyserie);
+     SeriesMenosPopulares(listadoSeries, listausuarioyserie, listadoUsuarios);
 
 
     return 0;
